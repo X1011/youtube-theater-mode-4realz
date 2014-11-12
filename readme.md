@@ -5,6 +5,6 @@ known issues:
 </ul>
 
 changelog:
-<b>2014-10-26:</b> apply in small mode, too, since, for some reason, YouTube is now resetting to small mode on every video I open
-<b>2014-10-16:</b> fix for video unavailable pages
-<b>2014-10-04:</b> fix for <a href='https://userstyles.org/styles/62289/black-youtube-by-panos'>Black Youtube by Panos</a>
+<b>2014-10-26:</b> apply in small mode, too, since, for some reason, YouTube is now resetting to small mode on every video I open<br>
+<b>2014-10-16:</b> fix for video unavailable pages<br>
+<b>2014-10-04:</b> fix for <a href='https://userstyles.org/styles/62289/black-youtube-by-panos'>Black Youtube by Panos</a><br>
