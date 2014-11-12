@@ -26,9 +26,11 @@ div#page-container {
 	height: 100vh !important;
 }
 
-.html5-main-video {
+.watch-medium .html5-main-video,
+.watch-large  .html5-main-video {
 	width:  100% !important;
 	height: 100% !important;
+	left: auto !important;
 }
 
 }
