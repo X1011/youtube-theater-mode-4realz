@@ -1,0 +1,49 @@
+@-moz-document url-prefix("https://www.youtube.com/watch?") {
+
+/* hide header */
+#masthead-positioner,
+#masthead-positioner-height-offset {
+	display: none;
+}
+
+/* fix for Black Youtube by Panos */
+div#page-container {
+	margin-top: 0 !important;
+}
+
+/* main video sizing */
+/* targeting small, medium, and large classes so as not to apply to Chromecast mode and video unavailable pages */
+
+.watch-small, .watch-medium, .watch-large,
+.watch-small  .player-width,
+.watch-medium .player-width,
+.watch-large  .player-width {
+	width: auto !important;
+	max-width: 100% !important;
+	margin-top: 0 !important;
+}
+
+.watch-small  .player-height,
+.watch-medium .player-height,
+.watch-large  .player-height {
+	height: 100vh !important;
+}
+
+.html5-main-video {
+	width:  100% !important;
+	height: 100% !important;
+}
+
+
+/* fixes for small player positioning */
+
+#player-api {
+	float: none !important;
+}
+
+#watch7-sidebar {
+	top: auto !important;
+	margin-top: 0 !important;
+}
+
+}
