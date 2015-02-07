@@ -12,17 +12,18 @@ div#page-container {
 }
 
 /* main video sizing */
+/* targeting small, medium, and large classes so as not to apply to Chromecast mode */
 
 .watch-medium, .watch-large,
-.watch-medium .player-width,
-.watch-large  .player-width {
+.watch-medium .player-width:not(.player-unavailable),
+.watch-large  .player-width:not(.player-unavailable) {
 	width: auto !important;
 	max-width: 100% !important;
 	margin-top: 0 !important;
 }
 
-.watch-medium .player-height,
-.watch-large  .player-height {
+.watch-medium .player-height:not(.player-unavailable),
+.watch-large  .player-height:not(.player-unavailable) {
 	height: 100vh !important;
 }
 
