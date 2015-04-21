@@ -6,32 +6,34 @@
 	display: none;
 }
 
-/* fix for Black Youtube by Panos */
+/* fix for Black Youtube by Panos
+   (overspecified to override its !important rule) */
 div#page-container {
 	margin-top: 0 !important;
 }
 
 /* main video sizing */
-/* targeting small, medium, and large classes so as not to apply to Chromecast mode */
 
-.watch-medium, .watch-large,
-.watch-medium .player-width:not(.player-unavailable),
-.watch-large  .player-width:not(.player-unavailable) {
+.watch-stage-mode #player {
 	width: auto !important;
-	max-width: 100% !important;
+}
+
+.watch-tiny {
 	margin-top: 0 !important;
 }
 
-.watch-medium .player-height:not(.player-unavailable),
-.watch-large  .player-height:not(.player-unavailable) {
+/* .watch-tiny needs to be selected separately because YouTube changes .watch-stage-mode to .watch-non-stage-mode at the tiny size, even when theater mode is selected */
+
+.watch-stage-mode #player-api,
+.watch-tiny       #player-api {
+	width:  auto  !important;
 	height: 100vh !important;
 }
 
-.watch-medium .html5-main-video,
-.watch-large  .html5-main-video {
+.watch-stage-mode .html5-main-video,
+.watch-tiny       .html5-main-video {
 	width:  100% !important;
 	height: 100% !important;
-	left: auto !important;
 }
 
 }
