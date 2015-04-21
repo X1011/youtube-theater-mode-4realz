@@ -18,11 +18,7 @@ div#page-container {
 	width: auto !important;
 }
 
-.watch-tiny {
-	margin-top: 0 !important;
-}
-
-/* .watch-tiny needs to be selected separately because YouTube changes .watch-stage-mode to .watch-non-stage-mode at the tiny size, even when theater mode is selected */
+/* YouTube always sets non-stage-mode in tiny size, regardless of theater mode setting, so we have to always apply in tiny size if we want to apply in it at all. */
 
 .watch-stage-mode #player-api,
 .watch-tiny       #player-api {
@@ -34,6 +30,14 @@ div#page-container {
 .watch-tiny       .html5-main-video {
 	width:  100% !important;
 	height: 100% !important;
+
+	/* fix centering of non-16:9 videos, such as youtu.be/lr-Cr999fy0 */
+	left: auto !important;
+}
+
+/* YouTube applies a top margin to this element in non-stage-mode, but we want to treat it as stage-mode when it's tiny. */
+.watch-tiny {
+	margin-top: 0 !important;
 }
 
 }
