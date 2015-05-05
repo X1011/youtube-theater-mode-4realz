@@ -51,4 +51,8 @@ div#page-container {
 	display: none;
 }
 
+.yt-base-gutter {
+	min-width: 0 !important;
+}
+
 }
