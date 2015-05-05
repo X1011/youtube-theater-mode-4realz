@@ -14,22 +14,29 @@ div#page-container {
 
 /* main video sizing */
 
-.watch-stage-mode #player {
+.watch-stage-mode #player,
+#player.watch-tiny {
 	width: auto !important;
+	top:   auto !important;
 }
 
 /* YouTube always sets non-stage-mode in tiny size, regardless of theater mode setting, so we have to always apply in tiny size if we want to apply in it at all. */
 
 .watch-stage-mode #player-api,
 .watch-tiny       #player-api {
+	
 	width:  auto  !important;
 	height: 100vh !important;
+	
+	margin-left: auto !important;
+	position: static !important;
 }
 
 .watch-stage-mode .html5-main-video,
 .watch-tiny       .html5-main-video {
 	width:  100% !important;
 	height: 100% !important;
+	top:    auto !important;
 
 	/* fix centering of non-16:9 videos, such as youtu.be/lr-Cr999fy0 */
 	left: auto !important;
@@ -38,6 +45,10 @@ div#page-container {
 /* YouTube applies a top margin to this element in non-stage-mode, but we want to treat it as stage-mode when it's tiny. */
 .watch-tiny {
 	margin-top: 0 !important;
+}
+
+#placeholder-player:not(.watch-small) {
+	display: none;
 }
 
 }
