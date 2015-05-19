@@ -14,16 +14,12 @@ div#page-container {
 
 /* main video sizing */
 
-.watch-stage-mode #player,
-#player.watch-tiny {
+.watch-wide #player {
 	width: auto !important;
-	top:   auto !important;
+	min-width: 0 !important;
 }
 
-/* YouTube always sets non-stage-mode in tiny size, regardless of theater mode setting, so we have to always apply in tiny size if we want to apply in it at all. */
-
-.watch-stage-mode #player-api,
-.watch-tiny       #player-api {
+.watch-wide #player-api {
 	
 	width:  auto  !important;
 	height: 100vh !important;
@@ -32,8 +28,7 @@ div#page-container {
 	position: static !important;
 }
 
-.watch-stage-mode .html5-main-video,
-.watch-tiny       .html5-main-video {
+.watch-wide .html5-main-video {
 	width:  100% !important;
 	height: 100% !important;
 	top:    auto !important;
@@ -42,12 +37,8 @@ div#page-container {
 	left: auto !important;
 }
 
-/* YouTube applies a top margin to this element in non-stage-mode, but we want to treat it as stage-mode when it's tiny. */
-.watch-tiny {
-	margin-top: 0 !important;
-}
-
-#placeholder-player:not(.watch-small) {
+.watch-wide #placeholder-player,
+.watch-wide #placeholder-playlist {
 	display: none;
 }
 
