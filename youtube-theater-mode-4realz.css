@@ -17,6 +17,9 @@ div#page-container {
 .watch-wide #player {
 	width: auto !important;
 	min-width: 0 !important;
+	
+	position: static !important;
+	margin-top: 0 !important;
 }
 
 .watch-wide #player-api {
